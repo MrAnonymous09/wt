@@ -5,21 +5,21 @@ import Header from './Header.tsx';
 
 const Student: React.FC = () => {
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    semester: '',
-    division: '',
-    course: '',
-    srn: '',
-    rollNo: '',
-  });
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   semester: '',
+  //   division: '',
+  //   course: '',
+  //   srn: '',
+  //   rollNo: '',
+  // });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.id]: e.target.value,
-    });
-  };
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.id]: e.target.value,
+  //   });
+  // };
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     // Handle file upload logic here
@@ -30,22 +30,22 @@ const Student: React.FC = () => {
     }
   };
 
-  const handleSubmit = () => {
-    // Handle form submission logic here
+  // const handleSubmit = () => {
+  //   // Handle form submission logic here
 
-    // After successful submission, show the success popup
-    setShowSuccessPopup(true);
+  //   // After successful submission, show the success popup
+  //   setShowSuccessPopup(true);
 
-    // You can reset the form fields here if needed
-    setFormData({
-      name: '',
-      semester: '',
-      division: '',
-      course: '',
-      srn: '',
-      rollNo: '',
-    });
-  };
+  //   // You can reset the form fields here if needed
+  // //   setFormData({
+  // //     name: '',
+  // //     semester: '',
+  // //     division: '',
+  // //     course: '',
+  // //     srn: '',
+  // //     rollNo: '',
+  // //   });
+  // };
 
   return (
     <div
@@ -60,8 +60,8 @@ const Student: React.FC = () => {
       <Header />
       <div className="flex items-center justify-center">
         <div className="lg:w-1/2 md:w-3/4 sm:w-full bg-black bg-opacity-40 p-8 rounded shadow-lg">
-          <h2 className="text-2xl font-bold mb-4 text-white">Single Student Data Upload</h2>
-          <div className="mb-4 lg:flex">
+          <h2 className="text-2xl font-bold mb-4 text-white">Student Data Upload</h2>
+          {/* <div className="mb-4 lg:flex">
             <div className="lg:w-1/2 pr-2 mb-2 lg:mb-0">
               <label className="block text-gray-300">Name</label>
               <input
@@ -123,7 +123,7 @@ const Student: React.FC = () => {
             className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-700 transition duration-300 mb-4"
           >
             Submit
-          </button>
+          </button> */}
           // ...
           <div className="flex justify-between">
             <label

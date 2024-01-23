@@ -149,7 +149,7 @@ const Attendance: React.FC = () => {
               <table className="w-full border-collapse border border-white text-white">
                 <thead>
                   <tr>
-                    <th className="border border-white p-2">Room No</th>
+                    <th className="border border-white p-2">Venue No</th>
                     <th className="border border-white p-2">3rd Sem Students</th>
                     <th className="border border-white p-2">5th Sem Students</th>
                     <th className="border border-white p-2">Question Paper Count (3rd Sem)</th>

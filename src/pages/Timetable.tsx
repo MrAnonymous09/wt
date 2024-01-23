@@ -128,7 +128,7 @@ const Timetable: React.FC = () => {
               onClick={() => handleUploadTimetable()}
               className="flex-1 bg-green-500 text-white p-2 rounded hover:bg-green-700 transition duration-300 focus:outline-none ml-2"
             >
-              Upload Timetable
+              Upload / Download Timetable
             </button>
           </div>
 

@@ -5,34 +5,38 @@ import Header from './Header.tsx';
 
 const Teacher: React.FC = () => {
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
-  const [formData, setFormData] = useState({
-    id: '',
-    name: '',
-    branch: '',
-    subject: '',
-  });
+  // const [formData, setFormData] = useState({
+  //   id: '',
+  //   name: '',
+  //   branch: '',
+  //   subject: '',
+  //   sem: '',
+  //   division: '',
+  // });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.id]: e.target.value,
-    });
-  };
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.id]: e.target.value,
+  //   });
+  // };
 
-  const handleSubmit = () => {
-    // Handle form submission logic here
+  // const handleSubmit = () => {
+  //   // Handle form submission logic here
 
-    // After successful submission, show the success popup
-    setShowSuccessPopup(true);
+  //   // After successful submission, show the success popup
+  //   setShowSuccessPopup(true);
 
-    // You can reset the form fields here if needed
-    setFormData({
-      id: '',
-      name: '',
-      branch: '',
-      subject: '',
-    });
-  };
+  //   // You can reset the form fields here if needed
+  //   setFormData({
+  //     id: '',
+  //     name: '',
+  //     branch: '',
+  //     subject: '',
+  //     sem: '',
+  //     division: '',
+  //   });
+  // };
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     // Handle file upload logic here
@@ -57,7 +61,7 @@ const Teacher: React.FC = () => {
       <div className="flex items-center justify-center">
         <div className="lg:w-1/2 md:w-3/4 sm:w-full bg-black bg-opacity-40 p-8 rounded shadow-lg">
           <h2 className="text-2xl font-bold mb-4 text-white">Single Teacher Data Upload</h2>
-          <div className="mb-4 lg:flex">
+          {/* <div className="mb-4 lg:flex">
             <div className="lg:w-1/2 pr-2 mb-2 lg:mb-0">
               <label className="block text-gray-300">ID</label>
               <input type="text" id="id" value={formData.id} onChange={handleChange} className="w-full border p-2" />
@@ -94,12 +98,32 @@ const Teacher: React.FC = () => {
               />
             </div>
           </div>
+          <div className="mb-4 lg:flex">
+            <div className="lg:w-1/2 pr-2 mb-2 lg:mb-0">
+              <label className="block text-gray-300">Semester</label>
+              <select id="sem" value={formData.sem} onChange={handleChange} className="w-full border p-2">
+                <option value="3rd">3rd</option>
+                <option value="5th">5th</option>
+              </select>
+            </div>
+            <div className="lg:w-1/2 pl-2">
+              <label className="block text-gray-300">Division</label>
+              <select id="division" value={formData.division} onChange={handleChange} className="w-full border p-2">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+              </select>
+            </div>
+          </div>
           <button
             onClick={handleSubmit}
             className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-700 transition duration-300 mb-4"
           >
             Submit
-          </button>
+          </button> */}
 
           <div className="flex justify-between">
             <label

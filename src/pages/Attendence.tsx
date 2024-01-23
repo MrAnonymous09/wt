@@ -6,19 +6,27 @@ import Header from './Header.tsx';
 const Attendance: React.FC = () => {
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
   const [selectedRoom, setSelectedRoom] = useState('');
+  const [selectedDivision, setSelectedDivision] = useState('');
+  const [selectedSemester, setSelectedSemester] = useState('');
   const [absenteesListEvenSem, setAbsenteesListEvenSem] = useState<string[]>([]);
   const [absenteesListOddSem, setAbsenteesListOddSem] = useState<string[]>([]);
 
   const roomNumbers = ['Room 1', 'Room 2', 'Room 3', 'Room 4', 'Room 5']; // Add more room numbers as needed
+  const divisions = ['A', 'B', 'C', 'D', 'E', 'F']; // Add more divisions as needed
+  const semesters = ['3rd', '5th']; // Add more semesters as needed
 
   const handleSubmit = () => {
     // Handle form submission logic here
+    // You can access selectedRoom, selectedDivision, selectedSemester,
+    // and absentee lists (absenteesListEvenSem, absenteesListOddSem) to process the data accordingly.
 
     // After successful submission, show the success popup
     setShowSuccessPopup(true);
 
     // You can reset the form fields here if needed
     setSelectedRoom('');
+    setSelectedDivision('');
+    setSelectedSemester('');
     setAbsenteesListEvenSem([]);
     setAbsenteesListOddSem([]);
   };
@@ -60,6 +68,40 @@ const Attendance: React.FC = () => {
               {roomNumbers.map((room) => (
                 <option key={room} value={room}>
                   {room}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-gray-300">Select Division</label>
+            <select
+              id="division"
+              className="w-full border p-2"
+              value={selectedDivision}
+              onChange={(e) => setSelectedDivision(e.target.value)}
+            >
+              <option value="">Select Division</option>
+              {divisions.map((division) => (
+                <option key={division} value={division}>
+                  {division}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-gray-300">Select Semester</label>
+            <select
+              id="semester"
+              className="w-full border p-2"
+              value={selectedSemester}
+              onChange={(e) => setSelectedSemester(e.target.value)}
+            >
+              <option value="">Select Semester</option>
+              {semesters.map((semester) => (
+                <option key={semester} value={semester}>
+                  {semester}
                 </option>
               ))}
             </select>
